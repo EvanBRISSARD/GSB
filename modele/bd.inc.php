@@ -7,7 +7,7 @@ function connexionPDO()
     
     $login = 'root';
     $mdp = '';
-    $bd = 'brissard_gsb2026';
+    $bd = 'marique_gsb2026v3';
     $serveur = 'localhost';
     
     /* serveur de production pour code pays espagne

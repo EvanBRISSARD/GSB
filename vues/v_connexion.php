@@ -12,7 +12,9 @@ if (isset($_POST['connexion'])) {
             $_SESSION['habilitation'] = $arr['habilitation'];
             $_SESSION['login'] = $arr['id_log'];
             $_SESSION['matricule'] = $arr['matricule'];
+            $_SESSION['statut'] = $arr['statut'];
             $_SESSION['erreur'] = false;
+
             header('Location: index.php?uc=connexion&action=profil');
         }
     }
