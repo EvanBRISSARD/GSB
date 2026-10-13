@@ -57,6 +57,17 @@ switch ($uc) {
         break;
     }
 
+    case 'medicaments' : {
+        
+        if (!empty($_SESSION['login'])) {  // Si l'utilisateur est connecté
+            include("controleur/c_gererPraticien.php");
+        } else {  // Si l'utilisateur n'est pas connecté
+            include("vues/v_accesInterdit.php");
+        }
+
+        break;
+    }
+
     default: {
         include("vues/v_accueil.php");
         break;

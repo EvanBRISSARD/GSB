@@ -1,0 +1,23 @@
+<?php
+if (!isset($_REQUEST['action']) || empty($_REQUEST['action'])) {
+	$action = "connexion";
+} else {
+	$action = $_REQUEST['action'];
+}
+switch ($action) {
+	case 'afficherMedicament': {
+
+			if (isset($_SESSION['login'])) {
+				header('Location: index.php?uc=connexion&action=profil');
+			} else {
+				include("vues/v_connexion.php");
+			}
+			break;
+		}
+
+	default: {
+			header('location: index.php?uc=connexion&action=connexion');
+			break;
+		}
+}
+?>
