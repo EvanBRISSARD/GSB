@@ -22,7 +22,18 @@ switch ($action) {
 	}
 
 	case 'affichermedicament' : {
-		include("vues/v_affichermedicament.php");
+		if (!empty($_REQUEST['medicament'])) {
+			$pra = $_REQUEST['medicament'];
+
+			$info = getAllInformationMedicament($pra);
+			include("vues/v_affichermedicament.php");
+
+		} else {
+			// On renvoie vers le formulaire si aucun praticien n’a été choisi
+            $_SESSION['erreur'] = true;
+            header("Location: index.php?uc=medicaments&action=FormulaireMedicament");
+            exit;
+		}
 		break;
 	}
 

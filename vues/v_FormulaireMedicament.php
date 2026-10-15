@@ -21,7 +21,7 @@
                 <form action="index.php?uc=medicaments&action=affichermedicament" method="post"
                     class="formulaire-recherche col-12 m-0">
                     <label class="titre-formulaire" for="listemedoc">Médicaments :</label>
-                    <select required name="praticien" class="form-select mt-3">
+                    <select required name="medicament" class="form-select mt-3">
 
                         <!-- Liste déroulante permettant de récupérer les Médicament -->
                         <option value class="text-center">- Choisissez un Médicament -</option>
