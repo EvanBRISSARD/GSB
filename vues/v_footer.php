@@ -20,7 +20,7 @@
                             <?php if (isset($_SESSION['login'])) {
                                 echo
                                 '<li class="pb-2">
-                                    <i class=\'bx-fw bx bxs-chevron-right bx-xs\'></i><a class="text-decoration-none text-light py-1" href="index.php?uc=medicaments&action=formulairemedoc">Médicaments</a>
+                                    <i class=\'bx-fw bx bxs-chevron-right bx-xs\'></i><a class="text-decoration-none text-light py-1" href="index.php?uc=medicaments&action=FormulaireMedicament">Médicaments</a>
                                 </li>
                                 <li class="pb-2">
                                     <i class=\'bx-fw bx bxs-chevron-right bx-xs\'></i><a class="text-decoration-none text-light py-1" href="index.php?uc=praticiens&action=formulairepraticien">Praticiens</a>

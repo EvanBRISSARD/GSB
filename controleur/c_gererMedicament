@@ -1,23 +1,34 @@
 <?php
+
+// Accès réservé aux délégués ou responsables de secteur
+if (empty($_SESSION['login'])) {
+    include("vues/v_accesInterdit.php");
+    exit;
+}
+
+// Modèle praticien
+include_once __DIR__ . '/../modele/medicament.modele.inc.php';
+
 if (!isset($_REQUEST['action']) || empty($_REQUEST['action'])) {
 	$action = "connexion";
 } else {
 	$action = $_REQUEST['action'];
 }
 switch ($action) {
-	case 'afficherMedicament': {
-
-			if (isset($_SESSION['login'])) {
-				header('Location: index.php?uc=connexion&action=profil');
-			} else {
-				include("vues/v_connexion.php");
-			}
+	case 'FormulaireMedicament': {
+			$result = getAllNomMedicament();
+			include("vues/v_FormulaireMedicament.php");
 			break;
-		}
+	}
+
+	case 'affichermedicament' : {
+		include("vues/v_affichermedicament.php");
+		break;
+	}
 
 	default: {
-			header('location: index.php?uc=connexion&action=connexion');
+			header("Location: index.php?uc=medicaments&action=FormulaireMedicament");
 			break;
-		}
+	}
 }
 ?>

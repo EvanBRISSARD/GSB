@@ -60,7 +60,7 @@ switch ($uc) {
     case 'medicaments' : {
         
         if (!empty($_SESSION['login'])) {  // Si l'utilisateur est connecté
-            include("controleur/c_gererPraticien.php");
+            include("controleur/c_gererMedicament");
         } else {  // Si l'utilisateur n'est pas connecté
             include("vues/v_accesInterdit.php");
         }

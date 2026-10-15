@@ -36,7 +36,12 @@
                                 href="index.php?uc=accueil">Accueil</a>
                         </li>
 
-
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-info rounded-pill px-3 fw-bold"
+                                href="index.php?uc=medicaments&action=FormulaireMedicament">
+                                Médicaments
+                            </a>
+                        </li>
 
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle btn-outline-info rounded-pill px-3 fw-bold" href="#"

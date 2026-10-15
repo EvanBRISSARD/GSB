@@ -7,7 +7,7 @@ function connexionPDO()
     
     $login = 'root';
     $mdp = '';
-    $bd = 'brissard_gsb2026v3';
+    $bd = 'gsbv2026';
     $serveur = 'localhost';
     
     /* serveur de production pour code pays espagne
@@ -18,7 +18,7 @@ function connexionPDO()
     */
 
     try {
-        $conn = new PDO("mysql:host=$serveur;port=3307;dbname=$bd", $login, $mdp, array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''));
+        $conn = new PDO("mysql:host=$serveur;port=3306;dbname=$bd", $login, $mdp, array(Pdo\Mysql::ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''));
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $conn;
     } catch (PDOException $e) {
