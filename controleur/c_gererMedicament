@@ -25,8 +25,9 @@ switch ($action) {
 		if (!empty($_REQUEST['medicament'])) {
 			$pra = $_REQUEST['medicament'];
 
+			
 			$info = getAllInformationMedicament($pra);
-			include("vues/v_affichermedicament.php");
+			include("vues/v_afficherMedicament.php");
 
 		} else {
 			// On renvoie vers le formulaire si aucun praticien n’a été choisi
