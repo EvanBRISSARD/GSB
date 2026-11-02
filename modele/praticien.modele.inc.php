@@ -2,7 +2,7 @@
 
 <?php
 
-include_once 'bd.inc.php';
+include_once __DIR__ . '/bd.inc.php';
 
 /**
  * Récupère le nom d'un praticien

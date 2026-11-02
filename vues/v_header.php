@@ -36,6 +36,39 @@
                                 href="index.php?uc=accueil">Accueil</a>
                         </li>
 
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle btn-outline-info rounded-pill px-3 fw-bold" href="#"
+                                id="dropdownPraticiens" role="button" data-bs-toggle="dropdown">
+                                Rapport de visite
+                            </a>
+
+                            <ul class="dropdown-menu text-center">
+
+                                <!-- Visible pour tout utilisateur connecté (y compris visiteur) -->
+                                <li>
+                                    <a class="dropdown-item fw-bold"
+                                        href="index.php?uc=rapport&action=formrapportdevisite">
+                                        Rédiger un rapport
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item fw-bold"
+                                        href="index.php?uc=gestionPraticiens&action=formulaireGestion">
+                                        Mes rapport
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class="dropdown-item fw-bold"
+                                        href="index.php?uc=gestionPraticiens&action=formulaireGestion">
+                                        Rapport de ma région
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
                         <li class="nav-item">
                             <a class="nav-link btn-outline-info rounded-pill px-3 fw-bold"
                                 href="index.php?uc=medicaments&action=FormulaireMedicament">
