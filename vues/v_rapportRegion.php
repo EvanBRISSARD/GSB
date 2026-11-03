@@ -24,7 +24,7 @@
                             <th scope="col">Praticien</th>
                             <th scope="col">Motif</th>
                             <th scope="col">Bilan</th>
-                            <th scope="col">Médicaments / échantillons</th>
+                            <th scope="col">Echantillons</th>
                             <th scope="col">État</th>
                         </tr>
                     </thead>

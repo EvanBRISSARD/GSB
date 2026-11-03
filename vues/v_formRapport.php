@@ -41,10 +41,14 @@
                         <div class="col-12 col-lg-7">
                             <section class="bg-white border rounded-3 shadow-sm p-3 p-md-4 h-100">
                                 <div class="mb-4">
-                                    <h2 class="h4 mb-1">Informations du rapport</h2>
-                                    <p class="text-muted mb-0">Les informations principales de votre visite.</p>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="assets/img/rapport.png" alt="Logo de rapport" class="img-fluid rounded-3 shadow-sm p-2 bg-light" style="width: 60px; height: 60px; object-fit: contain;">
+                                        <div>
+                                            <h2 class="h4 mb-1">Informations du rapport</h2>
+                                            <p class="text-muted mb-0">Les informations principales de votre visite.</p>
+                                        </div>
+                                    </div>
                                 </div>
-
                                 <div class="row g-3">
                                     <div class="col-12 col-md-6">
                                         <label class="form-label" for="numeroRapport">Numéro de rapport <span class="text-danger">*</span></label>
@@ -124,6 +128,7 @@
                             <section class="echantillons-panel bg-white border rounded-3 shadow-sm p-3 p-md-4 h-100">
                                 <div class="echantillons-entete mb-4">
                                     <div class="d-flex align-items-center gap-3">
+                                        <img src="assets/img/pillule.png" alt="Logo de rapport" class="img-fluid rounded-3 shadow-sm p-2 bg-light" style="width: 60px; height: 60px; object-fit: contain;">
                                         <div>
                                             <h2 class="h4 mb-1">Échantillons remis</h2>
                                             <p class="text-muted mb-0">Associez les produits et les quantités remis au praticien.</p>
@@ -197,9 +202,11 @@
                             <div class="bg-white border rounded-3 shadow-sm p-3 p-md-4 d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3">
                                 <div class="form-check">
                                     <?php if (!empty($isViewing)): ?>
-                                        <span class="badge <?= ($editingReport['RAP_ETAT'] ?? '') === 'V' ? 'bg-success' : 'bg-secondary' ?>">
-                                            <?= ($editingReport['RAP_ETAT'] ?? '') === 'V' ? 'Définitif' : 'En cours' ?>
-                                        </span>
+                                        <h4>
+                                            <span class="badge <?= ($editingReport['RAP_ETAT'] ?? '') === 'V' ? 'bg-success' : 'bg-secondary' ?>">
+                                                <?= ($editingReport['RAP_ETAT'] ?? '') === 'V' ? 'Définitif' : 'En cours' ?>
+                                            </span>
+                                        </h4>
                                     <?php else: ?>
                                         <input class="form-check-input" type="checkbox" id="saisieDefinitive" name="saisieDefinitive" value="1"
                                             <?= isset($formValues['saisieDefinitive']) ? 'checked' : '' ?>>
