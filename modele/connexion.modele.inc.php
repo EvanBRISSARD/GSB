@@ -17,7 +17,7 @@ include_once 'bd.inc.php';
 		LEFT JOIN secteur s ON s.SEC_CODE=r.SEC_CODE 
 		WHERE c.COL_MATRICULE= :matricule";
 		$stmt = $pdo->prepare($req);  // Requête préparée et paramétrée
-        $stmt->bindValue(":matricule", $matricule, PDO::PARAM_INT);
+        $stmt->bindValue(":matricule", $matricule, PDO::PARAM_STR);
         $stmt->execute();
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
 		return $result;

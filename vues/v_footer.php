@@ -53,7 +53,7 @@
                 <div class="row pt-2 d-flex justify-content-center">
                     <div class="col-lg-6 col-sm-12">
                         <p class="text-center text-light light-300">
-                            © Copyright 2026 Estelle Méret | Randy Durelle | Tristan Da Silva.
+                            © Copyright 2026 Estelle Méret | Randy Durelle | Tristan Da Silva | Evan Brissard | Lucas Marique.
                         </p>
                     </div>
                 </div>
