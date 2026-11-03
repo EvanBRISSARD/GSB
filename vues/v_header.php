@@ -54,17 +54,19 @@
 
                                 <li>
                                     <a class="dropdown-item fw-bold"
-                                        href="index.php?uc=gestionPraticiens&action=formulaireGestion">
-                                        Mes rapport
+                                        href="index.php?uc=rapport&action=mesrapports">
+                                        Mes rapports
                                     </a>
                                 </li>
 
+                                <?php if ((int) ($_SESSION['habilitation'] ?? 0) === 2): ?>
                                 <li>
                                     <a class="dropdown-item fw-bold"
-                                        href="index.php?uc=gestionPraticiens&action=formulaireGestion">
+                                        href="index.php?uc=rapport&action=rapportregion">
                                         Rapport de ma région
                                     </a>
                                 </li>
+                                <?php endif; ?>
 
                             </ul>
                         </li>

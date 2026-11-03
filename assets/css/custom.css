@@ -381,6 +381,17 @@ textarea {
 	font-weight: 600;
 }
 
+.rapport-formulaire .form-control[readonly],
+.rapport-formulaire .form-control[disabled],
+.rapport-formulaire .form-select[disabled] {
+	background-color: #edf2f7 !important;
+	border-color: #aebdca !important;
+	color: #101820 !important;
+	opacity: 1 !important;
+	-webkit-text-fill-color: #101820 !important;
+	cursor: not-allowed;
+}
+
 @media (max-width: 575px) {
 	.echantillons-entete {
 		align-items: flex-start;
